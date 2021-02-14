@@ -18,7 +18,7 @@ const Post = mongoose.model('Post',{
                 name:{type: String, required: true},
                 title: {type: String, required: true},
                 description: {type: String, required: true},
-                time: {type: Date, default: Date.now()}
+                time: {type: Date, default: Date.now}
             })
         ],
         required: true
