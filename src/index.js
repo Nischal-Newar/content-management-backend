@@ -10,11 +10,11 @@ const postRouter = require('./routers/posts')
 dotenv.config();
 
 //setup server
-const port=process.env.PORT
+const port=process.env.PORT || 8443
 const app=express()
 
 //cors setup
-var allowlist = ['http://localhost:3000/']
+var allowlist = [`${process.env.host}`]
 var corsOptionsDelegate = function (req, callback) {
   var corsOptions;
   if (allowlist.indexOf(req.header('Referer')) !== -1) {
